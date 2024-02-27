@@ -53,7 +53,7 @@
 </table>
 
 
-Список заказы `test_list_orders.py`
+Список заказов `test_list_orders.py`
 <table>
 	<tbody>
 		<tr>

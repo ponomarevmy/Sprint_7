@@ -4,4 +4,4 @@ class Handle:
 
     LOGIN_COURIER = '/api/v1/courier/login'
 
-    MAKE_ORDER = '/api/v1/orders'
+    CREATE_ORDER = '/api/v1/orders'
