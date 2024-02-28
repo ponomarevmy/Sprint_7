@@ -9,4 +9,3 @@ class TestReturnOrderList:
     def test_list_order(self):
         response = requests.get(f'{Urls.URL}{Handle.CREATE_ORDER}')
         assert len(response.json()) > 0
-        print(response.json())

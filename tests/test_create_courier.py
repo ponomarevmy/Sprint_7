@@ -23,18 +23,18 @@ class TestCreateCourier:
         response = requests.post(
             f'{Urls.URL}{Handle.CREATE_COURIER}',
             TestCreateCourier.data)
-        assert response.status_code == 409
+        assert response.status_code == 409 and 'Этот логин уже используется' in response.text
 
     @allure.title('Нельзя создать курьера без логина')
     def test_create_courier_without_login(self):
         response = requests.post(
             f'{Urls.URL}{Handle.CREATE_COURIER}',
             gen_without_login())
-        assert response.status_code == 400
+        assert response.status_code == 400 and 'Недостаточно данных для создания учетной записи' in response.text
 
     @allure.title('Нельзя создать курьера без пароля')
     def test_create_courier_without_password(self):
         response = requests.post(
             f'{Urls.URL}{Handle.CREATE_COURIER}',
             gen_without_password())
-        assert response.status_code == 400
+        assert response.status_code == 400 and 'Недостаточно данных для создания учетной записи' in response.text
